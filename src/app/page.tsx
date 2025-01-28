@@ -23,7 +23,7 @@ export default function Home() {
           <Title1>THE MODES</Title1>
           <SocialMediaIcons/>
           <Image
-            src="/how-many-moons-cover.png"
+            src={'/the-modes-website'+"/how-many-moons-cover.png"}
             width={250}
             height={250}
             placeholder="blur"
