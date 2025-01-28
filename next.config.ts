@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: '/docs',
+  basePath: '/the-modes-website',
 };
 
 export default nextConfig;
