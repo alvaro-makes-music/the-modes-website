@@ -8,13 +8,13 @@ import UpcomingEvent from "@/components/UpcomingEvent";
 import Video from "@/components/Video";
 import Title1 from "@/components/Title1";
 import Title2 from "@/components/Title2";
-// import NavBar from "@/components/NavBar";
+import NavBar from "@/components/NavBar";
 
 export default function Home() {
   return (
     <div>
       <BackgroundImage/>
-      {/* <NavBar/> */}
+      <NavBar/>
       <div style={{
           height: '200vh', padding: '2rem',
           // paddingTop: '4rem'
