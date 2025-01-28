@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <div>
       <BackgroundImage/>
-      <NavBar/>
+      {/* <NavBar/> */}
       <div style={{
           height: '200vh', padding: '2rem',
           // paddingTop: '4rem'
