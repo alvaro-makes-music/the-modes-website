@@ -11,11 +11,11 @@ export default function ArtworkWithLink({url, source, blurSource, altText} : Art
   return (
     <a href={url} target="_blank" rel="noopener noreferrer">
       <Image
-        src={source}
+        src={'/the-modes-website/'+source}
         width={190}
         height={190}
         placeholder="blur"
-        blurDataURL={blurSource}
+        blurDataURL={'/the-modes-website/'+blurSource}
         alt={altText}
         className="transition ease-in-out scale-100 active:scale-90 duration-200 active:opacity-70"
         style={{ filter: 'drop-shadow(3px 3px 15px rgba(0, 0, 0, 1)' }}
