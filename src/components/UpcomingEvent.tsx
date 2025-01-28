@@ -24,7 +24,7 @@ export default function UpcomingEvent({ date, location, city, zip, source, width
       {/* @TODO add a blurred image and base-64 url */}
       <div className="flex flex-col items-center">
         <Image
-          src={source}
+          src={'/the-modes-website/'+source}
           width={width}
           height={height}
           alt={altText}
