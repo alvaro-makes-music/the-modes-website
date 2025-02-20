@@ -3,10 +3,11 @@ import { useEffect } from 'react';
 import styles from '@/app/styles/BackgroundImage.module.css';
 
 export default function BackgroundImage() {
+  const heightDifference = document.body.scrollHeight - window.innerHeight
   useEffect(() => {
     const handleScroll = () => {
       // Calculate the scroll percentage
-      const scrollPercentage = window.scrollY / (document.body.scrollHeight - window.innerHeight);
+      const scrollPercentage = window.scrollY / (heightDifference);
 
       // Log scroll percentage to see if it’s updating
       // console.log("Scroll Percentage:", scrollPercentage);
