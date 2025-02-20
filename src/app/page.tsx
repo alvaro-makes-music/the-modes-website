@@ -10,7 +10,6 @@ import Video from "@/components/Video";
 import Title1 from "@/components/Title1";
 import Title2 from "@/components/Title2";
 import NavBar from "@/components/NavBar";
-import Link from 'next/link';
 
 export default function Home() {
   return (
