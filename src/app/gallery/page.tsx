@@ -1,6 +1,6 @@
 import BackgroundImage from "@/components/BackgroundImage";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
 import Image from "next/image";
 import SocialMediaIcons from "@/components/SocialMediaIcons";
 // import ArtworkWithLink from "@/components/ArtworkWithLink";
