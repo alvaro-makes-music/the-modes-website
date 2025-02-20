@@ -17,7 +17,7 @@ export default function ArtworkWithLink({url, source, blurSource, altText} : Art
         placeholder="blur"
         blurDataURL={'/the-modes-website/'+blurSource}
         alt={altText}
-        className="transition ease-in-out scale-100 active:scale-90 duration-200 active:opacity-70"
+        className="md:w-[500px] transition ease-in-out scale-100 active:scale-90 duration-200 active:opacity-70"
         style={{ filter: 'drop-shadow(3px 3px 15px rgba(0, 0, 0, 1)' }}
       />
     </a>

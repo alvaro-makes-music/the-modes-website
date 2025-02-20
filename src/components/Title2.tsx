@@ -7,7 +7,7 @@ interface Title1Props {
 export default function Title1({ children }: Title1Props) {
   return (
     <h1
-      className="font-[family-name:var(--font-almendra-regular)] text-2xl drop-shadow-text">
+      className="font-[family-name:var(--font-almendra-regular)] text-2xl md:text-4xl drop-shadow-text">
       {children}
     </h1>
   )

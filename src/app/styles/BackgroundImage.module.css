@@ -2,9 +2,9 @@
   position: static;
   top: 0;
   left: 0;
-  height: 100d;
+  height: 100%;
   width: 100%;
-  background-image: url('/the-modes-website/moons-cropped-v2.jpg');
+  background-image: url('/the-modes-website/night-sky.jpg');
   background-size: 100% 100%;
   background-attachment: fixed;
   background-position: var(--bg-pos, 0%) center;

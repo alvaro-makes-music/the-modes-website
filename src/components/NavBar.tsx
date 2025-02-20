@@ -62,6 +62,13 @@ export default function NavBar() {
             Bio
           </a>
           <a
+            href="/the-modes-website/gallery"
+            className="text-gray-300 hover:underline"
+            // onClick={() => setIsOpen(false)}
+          >
+            Gallery
+          </a>
+          <a
             href="#contact"
             className="text-gray-300 hover:underline"
             onClick={() => setIsOpen(false)}

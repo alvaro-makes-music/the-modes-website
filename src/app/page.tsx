@@ -10,21 +10,23 @@ import Video from "@/components/Video";
 import Title1 from "@/components/Title1";
 import Title2 from "@/components/Title2";
 import NavBar from "@/components/NavBar";
+import Link from 'next/link';
 
 export default function Home() {
   return (
     <div>
-      <BackgroundImage/>
-      <NavBar/>
+      <BackgroundImage />
+      <NavBar />
       <div style={{
-          height: '200vh', padding: '2rem',
-          // paddingTop: '4rem'
-         }} className="flex flex-col gap-y-20 mb-100">
+        height: '200vh', padding: '2rem',
+        // paddingTop: '4rem'
+      }} className="flex flex-col gap-y-20 mb-100">
         <div id="title" className="flex flex-col gap-y-1 items-center">
           <Title1>THE MODES</Title1>
-          <SocialMediaIcons/>
+          <SocialMediaIcons />
           <Image
-            src={'/the-modes-website'+"/how-many-moons-cover.png"}
+            className="md:w-[600px]"
+            src={'/the-modes-website' + "/how-many-moons-cover.png"}
             width={250}
             height={250}
             placeholder="blur"
@@ -32,9 +34,9 @@ export default function Home() {
             alt="Artwork for The Modes new album, How Many Moons. The picture shows the three members of the band sitting on a bench by the beach, with a sky at dawn full of stars and with a big moon in the middle. The artwork includes a parental advisory explicit content warning."
           />
         </div>
-        <div id="music" className="flex flex-col gap-y-4">
+        <div id="music" className="flex flex-col gap-y-4 md:gap-y-10">
           <Title2>Music</Title2>
-          <div className="flex flex-col items-center gap-y-5">
+          <div className="flex flex-col items-center gap-y-5 md:gap-y-9">
             <ArtworkWithLink
               url="https://distrokid.com/hyperfollow/themodes/crashin"
               source="/crashin-official-cover-art-the-modes-2.jpg"
@@ -57,7 +59,7 @@ export default function Home() {
         </div>
         <div id="videos" className="flex flex-col gap-y-4">
           <Title2>Videos</Title2>
-          <div className="flex flex-col items-center px-3 gap-8">
+          <div className="flex flex-col items-center px-3 gap-8 md:gap-14">
             <Video
               src="https://www.youtube.com/embed/oadA69GFgLI"
               title="Who Are The Modes?"
@@ -71,13 +73,13 @@ export default function Home() {
         <div id="shop" className="flex flex-col gap-y-4 font-[family-name:var(--font-almendra-regular)]">
           <Title2>Shop</Title2>
           <div className="flex flex-col items-center gap-y-5">
-            <p className="drop-shadow-text">Coming soon!</p>
+            <p className="drop-shadow-text md:text-xl">Coming soon!</p>
           </div>
         </div>
         <div id="events" className="flex flex-col gap-y-4 font-[family-name:var(--font-almendra-regular)]">
           <Title2>Upcoming Events</Title2>
           <div className="flex flex-col items-center gap-y-5">
-            <p className="drop-shadow-text">Coming up soon!</p>
+            <p className="drop-shadow-text md:text-xl">Coming up soon!</p>
             <UpcomingEvent
               date="OCT 21, 2024"
               location="Marina Wine"
@@ -94,10 +96,11 @@ export default function Home() {
         </div>
         <div id="bio" className="flex flex-col gap-y-4 font-[family-name:var(--font-almendra-regular)]">
           <Title2>Bio</Title2>
-          <div className="flex flex-col text-justify text-sm text-gray-300">
-            <p className="drop-shadow-text">Formed in 2018, The Modes are an eclectic Pop Trio based in SoCal. Inspired by a wide range of genres, each member brings their own a unique tastes to form the group’s sound. The Modes have performed locally from Los Angeles to Orange County, and are currently finalizing their first EP titled ‘SUPERNOVA’.</p>
+          <div className="flex flex-col text-justify text-sm text-gray-300 md:text-2xl">
+            <p className="drop-shadow-text">Formed in 2018, The Modes are an eclectic Pop Trio based in SoCal. Inspired by a wide range of genres, each member brings their own a unique tastes to form the group’s sound.</p>
+            <p className="drop-shadow-text">The Modes have performed locally from Los Angeles to Orange County, and are currently finalizing their first EP titled ‘SUPERNOVA’.</p>
             <br />
-            <p className="drop-shadow-text">The Modes consists of:</p>
+            <p className="drop-shadow-text">The Modes consist of:</p>
             <ul className="list-disc pl-5 space-y-2 drop-shadow-text">
               <li>Aziza Gomez: Vocalist / Lyricist / Saxophonist / Supporting Keyboardist</li>
               <li>Tom Skies: Vocalist / Lyricist / Keyboardist / Producer</li>
@@ -112,14 +115,72 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <div id="gallery" className="flex flex-col gap-y-4 font-[family-name:var(--font-almendra-regular)]">
+          <Title2>Gallery</Title2>
+          <div className="grid grid-cols-2 gap-3 md:grid-cols-6 md:gap-3">
+            <Image
+              src={'/the-modes-website' + "/how-many-moons-cover.png"}
+              width={250}
+              height={250}
+              placeholder="blur"
+              blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAAKAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAABgT/xAAeEAABAwUBAQAAAAAAAAAAAAABAgMEAAUREiEGcf/EABUBAQEAAAAAAAAAAAAAAAAAAAEE/8QAGBEAAwEBAAAAAAAAAAAAAAAAAAECMWH/2gAMAwEAAhEDEQA/ACI9XDg3ycy/HuDiA66jbZSgDuRwZp3b7pEk22K+hD4Q6yhaQo9wQD3tJFgAjAAyO4+1ET2qHdvWDrh//9k="
+              alt="Artwork for The Modes new album, How Many Moons. The picture shows the three members of the band sitting on a bench by the beach, with a sky at dawn full of stars and with a big moon in the middle. The artwork includes a parental advisory explicit content warning."
+            />
+            <Image
+              src={'/the-modes-website' + "/how-many-moons-cover.png"}
+              width={250}
+              height={250}
+              placeholder="blur"
+              blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAAKAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAABgT/xAAeEAABAwUBAQAAAAAAAAAAAAABAgMEAAUREiEGcf/EABUBAQEAAAAAAAAAAAAAAAAAAAEE/8QAGBEAAwEBAAAAAAAAAAAAAAAAAAECMWH/2gAMAwEAAhEDEQA/ACI9XDg3ycy/HuDiA66jbZSgDuRwZp3b7pEk22K+hD4Q6yhaQo9wQD3tJFgAjAAyO4+1ET2qHdvWDrh//9k="
+              alt="Artwork for The Modes new album, How Many Moons. The picture shows the three members of the band sitting on a bench by the beach, with a sky at dawn full of stars and with a big moon in the middle. The artwork includes a parental advisory explicit content warning."
+            />
+            <Image
+              src={'/the-modes-website' + "/how-many-moons-cover.png"}
+              width={250}
+              height={250}
+              placeholder="blur"
+              blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAAKAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAABgT/xAAeEAABAwUBAQAAAAAAAAAAAAABAgMEAAUREiEGcf/EABUBAQEAAAAAAAAAAAAAAAAAAAEE/8QAGBEAAwEBAAAAAAAAAAAAAAAAAAECMWH/2gAMAwEAAhEDEQA/ACI9XDg3ycy/HuDiA66jbZSgDuRwZp3b7pEk22K+hD4Q6yhaQo9wQD3tJFgAjAAyO4+1ET2qHdvWDrh//9k="
+              alt="Artwork for The Modes new album, How Many Moons. The picture shows the three members of the band sitting on a bench by the beach, with a sky at dawn full of stars and with a big moon in the middle. The artwork includes a parental advisory explicit content warning."
+            />
+
+            <Image
+              src={'/the-modes-website' + "/how-many-moons-cover.png"}
+              width={250}
+              height={250}
+              placeholder="blur"
+              blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAAKAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAABgT/xAAeEAABAwUBAQAAAAAAAAAAAAABAgMEAAUREiEGcf/EABUBAQEAAAAAAAAAAAAAAAAAAAEE/8QAGBEAAwEBAAAAAAAAAAAAAAAAAAECMWH/2gAMAwEAAhEDEQA/ACI9XDg3ycy/HuDiA66jbZSgDuRwZp3b7pEk22K+hD4Q6yhaQo9wQD3tJFgAjAAyO4+1ET2qHdvWDrh//9k="
+              alt="Artwork for The Modes new album, How Many Moons. The picture shows the three members of the band sitting on a bench by the beach, with a sky at dawn full of stars and with a big moon in the middle. The artwork includes a parental advisory explicit content warning."
+            />
+            <Image
+              src={'/the-modes-website' + "/crashin-official-cover-art-the-modes-2.jpg"}
+              width={250}
+              height={250}
+              placeholder="blur"
+              blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAAKAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAABgT/xAAeEAABAwUBAQAAAAAAAAAAAAABAgMEAAUREiEGcf/EABUBAQEAAAAAAAAAAAAAAAAAAAEE/8QAGBEAAwEBAAAAAAAAAAAAAAAAAAECMWH/2gAMAwEAAhEDEQA/ACI9XDg3ycy/HuDiA66jbZSgDuRwZp3b7pEk22K+hD4Q6yhaQo9wQD3tJFgAjAAyO4+1ET2qHdvWDrh//9k="
+              alt="Artwork for The Modes new album, How Many Moons. The picture shows the three members of the band sitting on a bench by the beach, with a sky at dawn full of stars and with a big moon in the middle. The artwork includes a parental advisory explicit content warning."
+            />
+            <div className="flex items-center justify-center">
+              <a
+                href={'/the-modes-website/gallery'}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="md:text-2xl border-2 px-2 rounded-sm transition ease-in-out scale-100 active:scale-90 duration-200 active:opacity-70"
+                // active:bg-white active:text-gray-800 active:border-gray-800
+                style={{ filter: 'drop-shadow(3px 3px 3px rgba(0, 0, 0, 1)' }}
+              >
+                {'VIEW ALL'}
+              </a>
+            </div>
+          </div>
+        </div>
         <div id="contact" className="flex flex-col gap-y-4 font-[family-name:var(--font-almendra-regular)]">
           <Title2>Contact</Title2>
           <div className="flex text-gray-300 gap-x-2">
-            <FontAwesomeIcon icon={faEnvelope} className="size-5" />
-            <a href="mailto:themodesmusicgroup@gmail.com" className="underline">themodesmusicgroup@gmail.com</a>
+            <FontAwesomeIcon icon={faEnvelope} className="size-5 md:size-7" />
+            <a href="mailto:themodesmusicgroup@gmail.com" className="underline md:text-xl">themodesmusicgroup@gmail.com</a>
           </div>
         </div>
-        <SocialMediaIcons className="pb-4"/>
+        <SocialMediaIcons className="pb-4" />
       </div>
     </div>
   );
