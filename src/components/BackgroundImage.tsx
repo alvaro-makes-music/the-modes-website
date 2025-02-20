@@ -3,15 +3,16 @@ import { useEffect } from 'react';
 import styles from '@/app/styles/BackgroundImage.module.css';
 
 export default function BackgroundImage() {
+  const x = 5
   useEffect(() => {
     const handleScroll = () => {
-      // Calculate the scroll percentage
-      const scrollPercentage = window.scrollY / (document.body.scrollHeight - window.innerHeight);
+  //     // Calculate the scroll percentage
+      // const scrollPercentage = window.scrollY / (document.body.scrollHeight - window.innerHeight);
 
-      // Log scroll percentage to see if it’s updating
-      // console.log("Scroll Percentage:", scrollPercentage);
+  //     // Log scroll percentage to see if it’s updating
+  //     // console.log("Scroll Percentage:", scrollPercentage);
 
-      // Update the CSS variable to shift the background horizontally
+  //     // Update the CSS variable to shift the background horizontally
       document.documentElement.style.setProperty('--bg-pos', `${scrollPercentage * 100}%`);
     };
 
