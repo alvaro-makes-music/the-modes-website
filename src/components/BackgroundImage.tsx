@@ -3,7 +3,6 @@ import { useEffect } from 'react';
 import styles from '@/app/styles/BackgroundImage.module.css';
 
 export default function BackgroundImage() {
-  const x = 5
   useEffect(() => {
     const handleScroll = () => {
   //     // Calculate the scroll percentage
