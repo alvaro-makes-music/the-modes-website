@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, /*faChevronUp, faChevronDown*/ } from '@fortawesome/free-solid-svg-icons'
-
+import Link from 'next/link';
 
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -16,65 +16,65 @@ export default function NavBar() {
       >
       <div
         // className={`text-white text-xl text-opacity-60 px-2 pl-6 pt-2 place-content-end gap-x-2 bg-black transition ${isOpen ? "bg-opacity-100" : "bg-opacity-0"}`}
-        className={`text-white text-opacity-70 pr-4 pt-4 flex justify-end gap-x-2 bg-black transition ${isOpen ? "bg-opacity-100" : "bg-opacity-0"}`}
+        className={`text-white text-opacity-70 pr-4 md:pr-6 pt-4 md:pt-8 flex justify-end gap-x-2 bg-black transition ${isOpen ? "bg-opacity-100" : "bg-opacity-0"}`}
         onClick={toggleMenu}
       >
         {/*MENU <FontAwesomeIcon icon={isOpen ? faChevronDown : faChevronUp} className="size-3" /> */}
-        <FontAwesomeIcon icon={faBars} className={`size-6 transition ${isOpen ? "rotate-90" : "rotate-0"}`} />
+        <FontAwesomeIcon icon={faBars} className={`size-6 md:size-7 transition ${isOpen ? "rotate-90" : "rotate-0"}`} />
       </div>
       {isOpen && (
         <div
           // className={'bg-black shadow-lg p-3 px-6 flex flex-col place-items-end space-y-1'}>
-          className={'bg-black shadow-lg p-4 flex flex-col place-items-end space-y-1'}>
-          <a
-            href="#music"
+          className={'bg-black shadow-lg p-4 md:pl-8 md:p-6 md:text-xl flex flex-col place-items-end space-y-1'}>
+          <Link
+            href="/#music"
             className="text-gray-300 hover:underline"
             onClick={() => setIsOpen(false)}
           >
             Music
-          </a>
-          <a
-            href="#videos"
+          </Link>
+          <Link
+            href="/#videos"
             className="text-gray-300 hover:underline"
             onClick={() => setIsOpen(false)}
           >
             Videos
-          </a>
-          <a
-            href="#shop"
+          </Link>
+          <Link
+            href="/#shop"
             className="text-gray-300 hover:underline"
             onClick={() => setIsOpen(false)}
           >
             Shop
-          </a>
-          <a
-            href="#events"
+          </Link>
+          <Link
+            href="/#events"
             className="text-gray-300 hover:underline"
             onClick={() => setIsOpen(false)}
           >
             Upcoming Events
-          </a>
-          <a
-            href="#bio"
+          </Link>
+          <Link
+            href="/#bio"
             className="text-gray-300 hover:underline"
             onClick={() => setIsOpen(false)}
           >
             Bio
-          </a>
-          <a
-            href="/the-modes-website/gallery"
+          </Link>
+          <Link
+            href="/gallery"
             className="text-gray-300 hover:underline"
             // onClick={() => setIsOpen(false)}
           >
             Gallery
-          </a>
-          <a
-            href="#contact"
+          </Link>
+          <Link
+            href="/#contact"
             className="text-gray-300 hover:underline"
             onClick={() => setIsOpen(false)}
           >
             Contact
-          </a>
+          </Link>
         </div>
       )}
     </div>

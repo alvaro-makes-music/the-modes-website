@@ -10,6 +10,8 @@ import Video from "@/components/Video";
 import Title1 from "@/components/Title1";
 import Title2 from "@/components/Title2";
 import NavBar from "@/components/NavBar";
+import Link from 'next/link';
+
 
 export default function Home() {
   return (
@@ -159,16 +161,16 @@ export default function Home() {
               alt="Artwork for The Modes new album, How Many Moons. The picture shows the three members of the band sitting on a bench by the beach, with a sky at dawn full of stars and with a big moon in the middle. The artwork includes a parental advisory explicit content warning."
             />
             <div className="flex items-center justify-center">
-              <a
-                href={'/the-modes-website/gallery'}
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                href={'/gallery'}
+                // target="_blank"
+                // rel="noopener noreferrer"
                 className="md:text-2xl border-2 px-2 rounded-sm transition ease-in-out scale-100 active:scale-90 duration-200 active:opacity-70"
                 // active:bg-white active:text-gray-800 active:border-gray-800
                 style={{ filter: 'drop-shadow(3px 3px 3px rgba(0, 0, 0, 1)' }}
               >
                 {'VIEW ALL'}
-              </a>
+              </Link>
             </div>
           </div>
         </div>

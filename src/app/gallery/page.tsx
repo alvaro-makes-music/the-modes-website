@@ -1,4 +1,4 @@
-import BackgroundImage from "@/components/BackgroundImage";
+// import BackgroundImage from "@/components/BackgroundImage";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
 import Image from "next/image";
@@ -9,11 +9,12 @@ import SocialMediaIcons from "@/components/SocialMediaIcons";
 import Title1 from "@/components/Title1";
 import Title2 from "@/components/Title2";
 import NavBar from "@/components/NavBar";
+import Link from 'next/link';
 
 export default function Home() {
   return (
     <div>
-      <BackgroundImage />
+      {/* <BackgroundImage /> */}
       <NavBar />
       <div style={{
         height: '200vh', padding: '2rem',
@@ -25,9 +26,9 @@ export default function Home() {
 
           <SocialMediaIcons />
 
-          <div id="gallery" className="flex flex-col gap-y-4 font-[family-name:var(--font-almendra-regular)]">
+          <div id="gallery" className="flex flex-col gap-y-4 md:gap-y-8 font-[family-name:var(--font-almendra-regular)]">
             <Title2>Gallery</Title2>
-            <div className="grid grid-cols-2 gap-3 md:grid-cols-6 md:gap-3">
+            <div className="grid grid-cols-2 gap-3 md:grid-cols-6 md:gap-6">
               <Image
                 src={'/the-modes-website' + "/how-many-moons-cover.png"}
                 width={250}
@@ -160,18 +161,20 @@ export default function Home() {
             </div>
           </div>
 
-          <a
-            href={'/the-modes-website'}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="border-2 px-2 m-10 rounded-sm transition ease-in-out scale-100 active:scale-90 duration-200 active:opacity-70"
+
+
+          <Link
+            href={'/'}
+            // target="_blank"
+            // rel="noopener noreferrer"
+            className="md:text-2xl border-2 px-2 m-10 rounded-sm transition ease-in-out scale-100 active:scale-90 duration-200 active:opacity-70"
             // active:bg-white active:text-gray-800 active:border-gray-800
             style={{ filter: 'drop-shadow(3px 3px 3px rgba(0, 0, 0, 1)' }}
           >
             {'BACK'}
-          </a>
+          </Link>
 
-          <SocialMediaIcons className="pb-4" />
+          <SocialMediaIcons className="pb-4 md:pb-0" />
         </div>
       </div>
     </div>
