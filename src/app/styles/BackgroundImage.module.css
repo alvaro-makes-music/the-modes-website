@@ -2,8 +2,8 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100dvw;
-  height: 100dvh;
+  width: 100svw;
+  height: 100svh;
   background-image: url('/the-modes-website/moons-cropped-v2.jpg');
   background-size: cover;
   background-attachment: fixed;
