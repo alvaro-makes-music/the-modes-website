@@ -27,35 +27,35 @@ export default function NavBar() {
           // className={'bg-black shadow-lg p-3 px-6 flex flex-col place-items-end space-y-1'}>
           className={'bg-black shadow-lg p-4 md:pl-8 md:p-6 md:text-xl flex flex-col place-items-end space-y-1'}>
           <Link
-            href="/#music"
+            href="#music"
             className="text-gray-300 hover:underline"
             onClick={() => setIsOpen(false)}
           >
             Music
           </Link>
           <Link
-            href="/#videos"
+            href="#videos"
             className="text-gray-300 hover:underline"
             onClick={() => setIsOpen(false)}
           >
             Videos
           </Link>
           <Link
-            href="/#shop"
+            href="#shop"
             className="text-gray-300 hover:underline"
             onClick={() => setIsOpen(false)}
           >
             Shop
           </Link>
           <Link
-            href="/#events"
+            href="#events"
             className="text-gray-300 hover:underline"
             onClick={() => setIsOpen(false)}
           >
             Upcoming Events
           </Link>
           <Link
-            href="/#bio"
+            href="#bio"
             className="text-gray-300 hover:underline"
             onClick={() => setIsOpen(false)}
           >
@@ -69,7 +69,7 @@ export default function NavBar() {
             Gallery
           </Link>
           <Link
-            href="/#contact"
+            href="#contact"
             className="text-gray-300 hover:underline"
             onClick={() => setIsOpen(false)}
           >
