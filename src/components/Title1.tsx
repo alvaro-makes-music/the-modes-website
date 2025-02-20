@@ -9,7 +9,7 @@ interface Title1Props {
 
 export default function Title1({ children }: Title1Props) {
   return (
-    <Link href="/the-modes-website">
+    <Link href="/">
       <h1
         className={`md:mt-8 md:text-8xl text-5xl font-bold text-white-600 font-[family-name:var(--font-ed-celandine-outline)] mb-1 ${styles.title}`}
         >
