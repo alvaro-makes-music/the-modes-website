@@ -14,7 +14,7 @@ import NavBar from "@/components/NavBar";
 export default function Home() {
   return (
     <div>
-      {/* <BackgroundImage/> */}
+      <BackgroundImage/>
       <NavBar/>
       <div style={{
           height: '200vh', padding: '2rem',
