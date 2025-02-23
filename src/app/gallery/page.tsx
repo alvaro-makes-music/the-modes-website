@@ -1,31 +1,18 @@
-// import BackgroundImage from "@/components/BackgroundImage";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
 import Image from "next/image";
 import SocialMediaIcons from "@/components/SocialMediaIcons";
-// import ArtworkWithLink from "@/components/ArtworkWithLink";
-// import UpcomingEvent from "@/components/UpcomingEvent";
-// import Video from "@/components/Video";
 import MainTitle from "@/components/MainTitle";
 import SectionTitle from "@/components/SectionTitle";
-// import NavBar from "@/components/NavBar";
 import Link from 'next/link';
 
 export default function Home() {
   return (
     <div>
-      {/* <BackgroundImage /> */}
-      {/* <NavBar /> */}
-      <div style={{
-        height: '200vh', padding: '2rem',
-        // paddingTop: '4rem'
-      }} className="flex flex-col gap-y-20 mb-100">
+      <div
+        style={{height: '200vh', padding: '2rem',}}
+        className="flex flex-col gap-y-20 mb-100">
         <div id="title" className="flex flex-col gap-y-1 items-center">
-
           <MainTitle>THE MODES</MainTitle>
-
           <SocialMediaIcons />
-
           <div id="gallery" className="flex flex-col gap-y-4 md:gap-y-8 font-[family-name:var(--font-almendra-regular)]">
             <SectionTitle>Gallery</SectionTitle>
             <div className="grid grid-cols-2 gap-3 md:grid-cols-6 md:gap-6">
