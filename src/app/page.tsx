@@ -7,12 +7,13 @@ import SocialMediaIcons from "@/components/SocialMediaIcons";
 import ArtworkWithLink from "@/components/ArtworkWithLink";
 import UpcomingEvent from "@/components/UpcomingEvent";
 import Video from "@/components/Video";
-import Title1 from "@/components/Title1";
-import Title2 from "@/components/Title2";
+import MainTitle from "@/components/MainTitle";
+import SectionTitle from "@/components/SectionTitle";
 import NavBar from "@/components/NavBar";
 import Link from 'next/link';
-import events from '@/app/data/events.json'
+import artworks from '@/app/data/artworks.json'
 import galleryPics from '@/app/data/galleryPics.json'
+import videos from '@/app/data/videos.json'
 
 
 export default function Home() {
@@ -25,7 +26,7 @@ export default function Home() {
         // paddingTop: '4rem'
       }} className="flex flex-col gap-y-20 mb-100">
         <div id="title" className="flex flex-col gap-y-1 items-center">
-          <Title1>THE MODES</Title1>
+          <MainTitle>THE MODES</MainTitle>
           <SocialMediaIcons />
           <Image
             className="md:w-[600px]"
@@ -38,40 +39,39 @@ export default function Home() {
           />
         </div>
         <div id="music" className="flex flex-col gap-y-4 md:gap-y-10">
-          <Title2>Music</Title2>
+          <SectionTitle>Music</SectionTitle>
           <div className="flex flex-col items-center gap-y-5 md:gap-y-9">
-            {events.map(event => (
+            {artworks.map(artwork => (
               <ArtworkWithLink
-                key={event.id}
-                url={event.url}
-                source={`/${event.source}`}
-                blurSource={event.blurSource}
-                altText={event.altText}
+                key={artwork.id}
+                url={artwork.url}
+                source={`/${artwork.source}`}
+                blurSource={artwork.blurSource}
+                altText={artwork.altText}
               />
             ))}
           </div>
         </div>
         <div id="videos" className="flex flex-col gap-y-4">
-          <Title2>Videos</Title2>
+          <SectionTitle>Videos</SectionTitle>
           <div className="flex flex-col items-center px-3 gap-8 md:gap-14">
-            <Video
-              src="https://www.youtube.com/embed/oadA69GFgLI"
-              title="Who Are The Modes?"
-            />
-            <Video
-              src="https://www.youtube.com/embed/0eo0_cXuf9U"
-              title="Crashin (Official Music Video)"
-            />
+            {videos.map(video => (
+              <Video
+                key={video.id}
+                src={video.src}
+                title={video.title}
+              />
+            ))}
           </div>
         </div>
         <div id="shop" className="flex flex-col gap-y-4 font-[family-name:var(--font-almendra-regular)]">
-          <Title2>Shop</Title2>
+          <SectionTitle>Shop</SectionTitle>
           <div className="flex flex-col items-center gap-y-5">
             <p className="drop-shadow-text md:text-xl">Coming soon!</p>
           </div>
         </div>
         <div id="events" className="flex flex-col gap-y-4 font-[family-name:var(--font-almendra-regular)]">
-          <Title2>Upcoming Events</Title2>
+          <SectionTitle>Upcoming Events</SectionTitle>
           <div className="flex flex-col items-center gap-y-5">
             <p className="drop-shadow-text md:text-xl">Coming up soon!</p>
             <UpcomingEvent
@@ -89,7 +89,7 @@ export default function Home() {
           </div>
         </div>
         <div id="bio" className="flex flex-col gap-y-4 font-[family-name:var(--font-almendra-regular)]">
-          <Title2>Bio</Title2>
+          <SectionTitle>Bio</SectionTitle>
           <div className="flex flex-col text-justify text-sm text-gray-300 md:text-2xl">
             <p className="drop-shadow-text">Formed in 2018, The Modes are an eclectic Pop Trio based in SoCal. Inspired by a wide range of genres, each member brings their own a unique tastes to form the group’s sound.</p>
             <p className="drop-shadow-text">The Modes have performed locally from Los Angeles to Orange County, and are currently finalizing their first EP titled ‘SUPERNOVA’.</p>
@@ -110,7 +110,7 @@ export default function Home() {
           </div>
         </div>
         <div id="gallery" className="flex flex-col gap-y-4 font-[family-name:var(--font-almendra-regular)]">
-          <Title2>Gallery</Title2>
+          <SectionTitle>Gallery</SectionTitle>
           <div className="grid grid-cols-2 gap-3 md:grid-cols-6 md:gap-3">
             {/* @TODO */}
             {galleryPics.map((pic, index) => {
@@ -140,7 +140,7 @@ export default function Home() {
           </div>
         </div>
         <div id="contact" className="flex flex-col gap-y-4 font-[family-name:var(--font-almendra-regular)]">
-          <Title2>Contact</Title2>
+          <SectionTitle>Contact</SectionTitle>
           <div className="flex text-gray-300 gap-x-2">
             <FontAwesomeIcon icon={faEnvelope} className="size-5 md:size-7" />
             <a href="mailto:themodesmusicgroup@gmail.com" className="underline md:text-xl">themodesmusicgroup@gmail.com</a>

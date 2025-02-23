@@ -6,8 +6,8 @@ import SocialMediaIcons from "@/components/SocialMediaIcons";
 // import ArtworkWithLink from "@/components/ArtworkWithLink";
 // import UpcomingEvent from "@/components/UpcomingEvent";
 // import Video from "@/components/Video";
-import Title1 from "@/components/Title1";
-import Title2 from "@/components/Title2";
+import MainTitle from "@/components/MainTitle";
+import SectionTitle from "@/components/SectionTitle";
 // import NavBar from "@/components/NavBar";
 import Link from 'next/link';
 
@@ -22,12 +22,12 @@ export default function Home() {
       }} className="flex flex-col gap-y-20 mb-100">
         <div id="title" className="flex flex-col gap-y-1 items-center">
 
-          <Title1>THE MODES</Title1>
+          <MainTitle>THE MODES</MainTitle>
 
           <SocialMediaIcons />
 
           <div id="gallery" className="flex flex-col gap-y-4 md:gap-y-8 font-[family-name:var(--font-almendra-regular)]">
-            <Title2>Gallery</Title2>
+            <SectionTitle>Gallery</SectionTitle>
             <div className="grid grid-cols-2 gap-3 md:grid-cols-6 md:gap-6">
               <Image
                 src={'/the-modes-website' + "/how-many-moons-cover.png"}

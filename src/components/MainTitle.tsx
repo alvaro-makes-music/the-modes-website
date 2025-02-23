@@ -3,11 +3,11 @@ import styles from '@/app/styles/Title.module.css';
 import Link from 'next/link';
 
 
-interface Title1Props {
+interface MainTitleProps {
   children: ReactNode
 }
 
-export default function Title1({ children }: Title1Props) {
+export default function MainTitle({ children }: MainTitleProps) {
   return (
     <Link href="/">
       <h1
