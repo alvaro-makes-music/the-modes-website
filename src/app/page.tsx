@@ -22,7 +22,6 @@ export default function Home() {
         <VideoSection/>
         <ShopSection/>
         <VideoSection/>
-        <BioSection/>
         <EventsSection/>
         <BioSection/>
         <ShortGallerySection/>
