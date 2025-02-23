@@ -21,7 +21,6 @@ export default function Home() {
         <MusicSection/>
         <VideoSection/>
         <ShopSection/>
-        <VideoSection/>
         <EventsSection/>
         <BioSection/>
         <ShortGallerySection/>
