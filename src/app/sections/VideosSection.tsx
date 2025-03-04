@@ -7,9 +7,9 @@ export default function VideoSection() {
     <div id="videos" className="flex flex-col gap-y-4">
       <SectionTitle>Videos</SectionTitle>
       <div className="flex flex-col items-center px-3 gap-8 md:gap-14">
-        {videos.map(video => (
+        {videos.map((video, index) => (
           <Video
-            key={video.id}
+            key={index}
             src={video.src}
             title={video.title}
           />

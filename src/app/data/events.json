@@ -1,0 +1,22 @@
+[
+    {
+        "date": "MAR 1, 2025",
+        "location": "The Wicked Wolf",
+        "city": "Long Beach",
+        "zip": "CA",
+        "source": "wickedWolfFlyer.jpg",
+        "altText": "Flyer for a The Modes show on March 1st, 2025. The poster shows Aziza on the left, under a red light, and Tom on the right, under a blue light. Tickets are $20.",
+        "ticketsLink": "https://www.google.com",
+        "isFree": false
+    },
+    {
+        "date": "MAR 27, 2025",
+        "location": "Que Sera",
+        "city": "Long Beach",
+        "zip": "CA",
+        "source": "estrellasEnVivoFlyer.png",
+        "altText": "Flyer for a The Modes show on March 27, 2025 at 9 pm (doors open at 8 pm). The poster shows the full live band playing in a dark venue, with a disco ball on top of them. A text on the top-left corner reads Brought to You by The Modes.",
+        "ticketsLink": "https://www.google.com",
+        "isFree": false
+    }
+]

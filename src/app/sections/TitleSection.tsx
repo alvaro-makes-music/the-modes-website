@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function TitleSection() {
     return (
         <div id="title" className="flex flex-col gap-y-1 items-center">
-          <MainTitle>THE MODES</MainTitle>
+          <MainTitle/>
           <SocialMediaIcons />
           <Image
             className="md:w-[600px]"

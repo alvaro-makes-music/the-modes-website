@@ -3,16 +3,17 @@ import SocialMediaIcons from "@/components/SocialMediaIcons";
 import MainTitle from "@/components/MainTitle";
 import SectionTitle from "@/components/SectionTitle";
 import Link from 'next/link';
+import Gallery from '@/components/Gallery'
 
-export default function Home() {
+export default function GalleryPage() {
   return (
     <div>
       <div
-        style={{height: '200vh', padding: '2rem',}}
-        className="flex flex-col gap-y-20 mb-100">
+        style={{height: '200vh'}}
+        className="flex flex-col gap-y-20 mb-10">
         <div id="title" className="flex flex-col gap-y-1 items-center">
-          <MainTitle>THE MODES</MainTitle>
-          <SocialMediaIcons />
+          <MainTitle/>
+          <SocialMediaIcons/>
           <div id="gallery" className="flex flex-col gap-y-4 md:gap-y-8 font-[family-name:var(--font-almendra-regular)]">
             <SectionTitle>Gallery</SectionTitle>
             <div className="grid grid-cols-2 gap-3 md:grid-cols-6 md:gap-6">
@@ -147,8 +148,6 @@ export default function Home() {
               />
             </div>
           </div>
-
-
 
           <Link
             href={'/'}
