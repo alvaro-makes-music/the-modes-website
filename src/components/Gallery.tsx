@@ -2,7 +2,7 @@ import galleryPics from '@/app/data/galleryPics.json'
 import Image from "next/image";
 import Link from 'next/link';
 
-export default function Gallery({isFull=false, maxGalleryItems} : {isFull: boolean, maxGalleryItems?: number}) {
+export default function Gallery({isFull=false, maxGalleryItems=5} : {isFull: boolean, maxGalleryItems?: number}) {
   return (
     <div className="grid grid-cols-2 gap-3 md:grid-cols-6 md:gap-3">
       {/* @TODO */}
