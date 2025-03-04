@@ -2,13 +2,12 @@ import galleryPics from '@/app/data/galleryPics.json'
 import Image from "next/image";
 import Link from 'next/link';
 
-export default function Gallery() {
-  const maxGalleryItems = 5
+export default function Gallery({isFull=false, maxGalleryItems} : {isFull: boolean, maxGalleryItems?: number}) {
   return (
     <div className="grid grid-cols-2 gap-3 md:grid-cols-6 md:gap-3">
       {/* @TODO */}
       {galleryPics.map((pic, index) => {
-        if (index < maxGalleryItems) return (
+        if (isFull || (!isFull && index < maxGalleryItems)) return (
           <Image
             key={index}
             src={'/the-modes-website/' + pic.src}
@@ -20,7 +19,7 @@ export default function Gallery() {
           />
         )
       })}
-      <div className="flex items-center justify-center">
+      {!isFull && <div className="flex items-center justify-center">
         <Link
           href={'/gallery'}
           // target="_blank"
@@ -31,7 +30,7 @@ export default function Gallery() {
         >
           {'VIEW ALL'}
         </Link>
-      </div>
+      </div>}
     </div>
   )
 }

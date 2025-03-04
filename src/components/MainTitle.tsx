@@ -1,4 +1,3 @@
-import { ReactNode } from 'react'
 import styles from '@/app/styles/Title.module.css';
 import Link from 'next/link';
 
