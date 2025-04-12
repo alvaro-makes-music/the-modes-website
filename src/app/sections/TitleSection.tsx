@@ -9,7 +9,7 @@ export default function TitleSection() {
           <SocialMediaIcons />
           <Image
             className="md:w-[600px]"
-            src={'/the-modes-website' + "/how-many-moons-cover.png"}
+            src={"/how-many-moons-cover.png"}
             width={250}
             height={250}
             placeholder="blur"

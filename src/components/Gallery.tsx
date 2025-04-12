@@ -11,7 +11,7 @@ export default function Gallery({isFull=false, maxGalleryItems=5} : {isFull: boo
           else return (
             <Image
               key={index}
-              src={'/the-modes-website/' + pic.src}
+              src={pic.src}
               width={250}
               height={250}
               placeholder="blur"

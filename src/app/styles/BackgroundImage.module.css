@@ -4,7 +4,7 @@
   left: 0;
   height: 100%;
   width: 100%;
-  background-image: url('/the-modes-website/night-sky.jpg');
+  background-image: url('/night-sky.jpg');
   background-size: 100% 100%;
   background-attachment: fixed;
   background-position: var(--bg-pos, 0%) center;

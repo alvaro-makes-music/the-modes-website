@@ -11,7 +11,7 @@ export default function ArtworkWithLink({url, source, blurSource, altText} : Art
   return (
     <a href={url} target="_blank" rel="noopener noreferrer">
       <Image
-        src={'/the-modes-website/'+source}
+        src={source}
         width={190}
         height={190}
         placeholder="blur"
