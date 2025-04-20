@@ -9,15 +9,18 @@ export default function Gallery({isFull=false, maxGalleryItems=5} : {isFull: boo
         (pic, index) =>{
           if (!isFull && index >= maxGalleryItems) return;
           else return (
-            <Image
-              key={index}
-              src={pic.src}
-              width={250}
-              height={250}
-              placeholder="blur"
-              blurDataURL={pic.blurURL}
-              alt={pic.altText}
-            />
+            <div className='aspect-square overflow-hidden'>
+              <Image
+                key={index}
+                src={pic.src}
+                width={250}
+                height={250}
+                className='w-full h-full object-cover'
+                placeholder="blur"
+                blurDataURL={pic.blurURL}
+                alt={pic.altText}
+              />
+            </div>
           )
         }
       )}
