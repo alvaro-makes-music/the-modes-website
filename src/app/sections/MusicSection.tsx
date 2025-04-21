@@ -11,7 +11,7 @@ export default function MusicSection() {
                 <ArtworkWithLink
                 key={artwork.id}
                 url={artwork.url}
-                source={`/${artwork.source}`}
+                source={`/media/images/artworks/${artwork.source}`}
                 blurSource={artwork.blurSource}
                 altText={artwork.altText}
                 />

@@ -11,7 +11,7 @@ export default function Gallery({isFull=false, maxGalleryItems=5} : {isFull: boo
           else return (
             <div key={index} className='aspect-square overflow-hidden'>
               <Image
-                src={"gallery-pics/"+pic.src}
+                src={"media/images/gallery-pics/"+pic.src}
                 width={250}
                 height={250}
                 className='w-full h-full object-cover'
