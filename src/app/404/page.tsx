@@ -10,7 +10,7 @@ export default function Custom404() {
         className="flex flex-col gap-y-10 m-10 font-[family-name:var(--font-almendra-regular)]">
         <SectionTitle>404 Page not found</SectionTitle>
         <Image
-          className="md:w-[600px]"
+          className="md:w-[300px]"
           src={"media/images/404-images/" + "404.jpg"}
           width={250}
           height={250}
