@@ -7,7 +7,7 @@ export default function Custom404() {
     <div>
       <div
         style={{ height: '200vh' }}
-        className="flex flex-col gap-y-10 m-10 font-[family-name:var(--font-almendra-regular)]">
+        className="flex flex-col items-center gap-y-10 m-10 font-[family-name:var(--font-almendra-regular)]">
         <SectionTitle>404 Page not found</SectionTitle>
         <Image
           className="md:w-[300px]"
